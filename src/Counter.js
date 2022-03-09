@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{memo} from 'react'
 import HigherOrderComponent from './HigherOrderComponent'
 
 
 const Counter = ({count,increment}) => {
 
+  console.log('Counter rendered')
   return(
     <div>
       <h3>{count}</h3>
@@ -12,4 +13,4 @@ const Counter = ({count,increment}) => {
   )
 }
 
-export default HigherOrderComponent(Counter)
+export default HigherOrderComponent(memo(Counter))
